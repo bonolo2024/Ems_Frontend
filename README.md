@@ -1,10 +1,38 @@
-# Frontend
+# Overview
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+The Employee Management System is a web application designed to manage employee records efficiently. Built with Angular for a dynamic and responsive user interface, and styled using Tailwind CSS for modern and clean aesthetics.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+# Features
+
+Employee CRUD Operations: `Create, Read, Update, and Delete employee records`.
+Responsive Design: `Fully responsive UI using Tailwind CSS`.
+Search and Filter: `Search and filter employee records by various criteria`.
+User Authentication: `Secure access with login and registration functionalities`.
+Data Validation: `Comprehensive form validation to ensure data integrity`.
+
+# Technologies Used
+
+Angular: `Front-end framework for building dynamic single-page applications`.
+Tailwind CSS: `Utility-first CSS framework for creating custom designs quickly`.
+TypeScript: `Superset of JavaScript for type safety and modern development features`.
+Angular CLI: `Command-line interface for scaffolding and managing Angular projects`.
+
+# Configuration
+Environment Variables:
+
+Configure your API endpoints and other settings in the src/environments directory.
+Tailwind CSS Customization:
+
+Customize Tailwind CSS styles by editing tailwind.config.js and src/styles.css.
+
+
+# Frontend
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
 
 ## Code scaffolding
 
