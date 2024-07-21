@@ -10,9 +10,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Employee CRUD Operations: `Create, Read, Update, and Delete employee records`.
 Responsive Design: `Fully responsive UI using Tailwind CSS`.
-Search and Filter: `Search and filter employee records by various criteria`.
-User Authentication: `Secure access with login and registration functionalities`.
-Data Validation: `Comprehensive form validation to ensure data integrity`.
 
 # Technologies Used
 
