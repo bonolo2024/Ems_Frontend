@@ -20,7 +20,6 @@ export class EmployeeServicesService {
     return this.httpClient.get<Employee[]>(`${this.baseURL}/`)
   }
 
-  //Not yet Tested
   addEmployee(employee: Employee): Observable<Object>{
     return this.httpClient.post(`${this.baseURL}/add`, employee);
   }

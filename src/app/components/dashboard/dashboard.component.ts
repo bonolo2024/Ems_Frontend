@@ -19,11 +19,15 @@ export class DashboardComponent {
   employee!: Employee;
 
 
+  totalEmployees!: number;
+
+
   constructor(private employeeService: EmployeeServicesService,
     private router: Router) { }
 
     ngOnInit(): void{
       this.getAllEmployees();
+   
     }
 
      getEmployeesByAdminId(adminid: number){
@@ -33,6 +37,7 @@ export class DashboardComponent {
 
     updateEmployeeById(employeeId: number) {
       this.router.navigate(['/update', employeeId])
+      console.log("Update",employeeId)
     }
 
     addEmployees(){
@@ -43,12 +48,10 @@ export class DashboardComponent {
       this.router.navigate(['/view', employeeId]); 
     }
 
-    // public getEmployeeById(){
-    //   this.router.navigate(['view']); 
-    // }
-
     public getAllEmployees() {
-      this.employeeService.getAllEmployees().subscribe(data => {this.employees = data})
+      this.employeeService.getAllEmployees().subscribe(data => {this.employees = data,
+        this.totalEmployees = data.length;
+      })
     }
 
     public deleteByEmployeeId(employeeId: number) {

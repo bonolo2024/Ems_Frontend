@@ -1,5 +1,26 @@
 <div class="px-4">
 
+    <div class="flex space-x-7">
+        <div class="card bg-base-100 min-w-44  md:w-60 shadow-xl my-4">
+            <div class="card-body">
+              <h2 class="font-bold text-gray-700">Active Employees</h2>
+              <h2 class="text-gray-500">{{totalEmployees}}</h2>
+              <div class="card-actions justify-end">
+              </div>
+            </div>
+          </div>
+    
+          <!-- <div class="card bg-base-100 min-w-44 md:w-96 shadow-xl my-4">
+            <div class="card-body">
+              <h2 class="card-title">All Employees</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div> -->
+    </div>
+
     <button class="my-4 btn text-white bg-gray-800" (click)="addEmployees()">New</button>
     <div class="relative overflow-x-auto sm:rounded-lg">
         <table class="md:w-full shadow-md text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -53,7 +74,6 @@
                         {{employee.contacts}}
                     </td>
                     <td class="px-6 py-4">
-                        <!-- <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" (click)="updateEmployeeById(employee.employeeId)">Update</a> -->
                         <button class="my-4 btn text-white bg-yellow-400" (click)="updateEmployeeById(employee.employeeId)">Update</button>
                     </td>
                     <td class="px-6 py-4">

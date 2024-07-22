@@ -3,37 +3,37 @@
         <div class="m-4">
                 <div class="card-body">
                     <div class="pb-4">
-                        <h2 class="card-title">Employee Number</h2>
+                        <h2 class="font-bold">EMPLOYEE NUMBER</h2>
                         <p>{{employee.employeeNumber}}</p>
                     </div>
                     <div class="pb-4">
-                        <h2 class="card-title">First Name</h2>
+                        <h2 class="font-bold">FIRST NAME</h2>
                         <p>{{employee.firstname}}</p>
                     </div>
 
                     <div class="pb-4">
-                        <h2 class="card-title">Last Name</h2>
+                        <h2 class="font-bold">Last Name</h2>
                         <p>{{employee.lastname}}</p>
                     </div>
 
                     <div class="pb-4">
-                        <h2 class="card-title">Department</h2>
+                        <h2 class="font-bold">Department</h2>
                         <p>{{employee.department}}</p>
                     </div>
 
                     <div class="pb-4">
-                        <h2 class="card-title">Email</h2>
+                        <h2 class="font-bold">Email</h2>
                         <p>{{employee.email}}</p>
                     </div>
 
                     <div class="pb-4">
-                        <h2 class="card-title">Contacts</h2>
+                        <h2 class="font-bold">Contacts</h2>
                         <p>{{employee.contacts}}</p>
                     </div>
 
                     <div class="flex space-x-4">
                         <div class="card-actions justify-start">
-                            <button class="btn text-white bg-yellow-400">Update</button>
+                            <button class="btn text-white bg-yellow-400" (click)="updateEmployeeById(employee.employeeId)">Update</button>
                           </div>
                           <div class="card-actions justify-start">
                             <button class="bg-red-600 btn text-white" (click)="deleteByEmployeeId(employee.employeeId)">Delete</button>

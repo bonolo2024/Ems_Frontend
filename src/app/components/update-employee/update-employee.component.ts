@@ -17,13 +17,14 @@ export class UpdateEmployeeComponent {
   employeeId!: number;
   employee: Employee = new Employee();
 
-  constructor(private route: ActivatedRoute,private employeeService: EmployeeServicesService, private router: Router) {}
+  constructor(private route: ActivatedRoute,private employeeService: EmployeeServicesService, private router: Router) {
+     this.employeeId = route.snapshot.params['employeeId'];
+  }
 
   ngOnInit():void {
     this.employeeId = this.route.snapshot.params['employeeId'];
-    this.employeeService.getEmployeeById(this.employeeId).subscribe(data => { this.employee = data })
     console.log(this.employeeId);
-
+    this.employeeService.getEmployeeById(this.employeeId).subscribe(data => { this.employee = data });
   }
 
   onSubmit(){

@@ -36,4 +36,9 @@ export class ViewEmployeeComponent {
     this.router.navigate(['/']); 
     // this.employeeService.getAllEmployees().subscribe(data => {this.employees = data})
   }
+
+  updateEmployeeById(employeeId: number) {
+    this.router.navigate(['/update', employeeId])
+    console.log("Update Id",employeeId)
+  }
 }
