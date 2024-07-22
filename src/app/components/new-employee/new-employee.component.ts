@@ -3,11 +3,13 @@ import { Employee } from '../../model/employee';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeServicesService } from '../../services/employee-services.service';
 import {  FormsModule, FormBuilder } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Departments } from '../../model/departments';
 
 @Component({
   selector: 'app-new-employee',
   standalone: true,
-  imports: [FormsModule ],
+  imports: [FormsModule, CommonModule],
   templateUrl: './new-employee.component.html',
   styleUrl: './new-employee.component.css'
 })
@@ -15,8 +17,9 @@ export class NewEmployeeComponent {
 
   // employee!: Employee;
   employee: Employee = new Employee();
+  departments = Object.values(Departments);
 
- constructor(private formbulider: FormBuilder, private employeeService: EmployeeServicesService,
+ constructor(private employeeService: EmployeeServicesService,
   private router: Router){
   }
 

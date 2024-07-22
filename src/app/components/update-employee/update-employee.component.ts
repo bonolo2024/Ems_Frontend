@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeServicesService } from '../../services/employee-services.service';
 import { Employee } from '../../model/employee';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule, NgFor } from '@angular/common';
+import { Departments } from '../../model/departments';
 
 @Component({
   selector: 'app-update-employee',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './update-employee.component.html',
   styleUrl: './update-employee.component.css'
 })
@@ -16,6 +17,8 @@ export class UpdateEmployeeComponent {
 
   employeeId!: number;
   employee: Employee = new Employee();
+
+  departments = Object.values(Departments);
 
   constructor(private route: ActivatedRoute,private employeeService: EmployeeServicesService, private router: Router) {
      this.employeeId = route.snapshot.params['employeeId'];
