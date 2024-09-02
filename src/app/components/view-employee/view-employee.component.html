@@ -1,0 +1,52 @@
+<div class="w-screen h-screen">
+    <div class="w-full h-full">
+        <div class="w-full h-20 bg-yellow-400 flex items-center">
+            <div class="px-5" (click)="back()">
+                <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+                  </svg>
+            </div>
+        </div>
+        <div class="m-4">
+                <div class="card-body">
+                    <div class="pb-4">
+                        <h2 class="font-bold">EMPLOYEE NUMBER</h2>
+                        <p>{{employee.employeeNumber}}</p>
+                    </div>
+                    <div class="pb-4">
+                        <h2 class="font-bold">FIRST NAME</h2>
+                        <p>{{employee.firstname}}</p>
+                    </div>
+
+                    <div class="pb-4">
+                        <h2 class="font-bold">Last Name</h2>
+                        <p>{{employee.lastname}}</p>
+                    </div>
+
+                    <div class="pb-4">
+                        <h2 class="font-bold">Department</h2>
+                        <p>{{employee.department}}</p>
+                    </div>
+
+                    <div class="pb-4">
+                        <h2 class="font-bold">Email</h2>
+                        <p>{{employee.email}}</p>
+                    </div>
+
+                    <div class="pb-4">
+                        <h2 class="font-bold">Contacts</h2>
+                        <p>{{employee.contacts}}</p>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <div class="card-actions justify-start">
+                            <button class="btn text-white bg-yellow-400" (click)="updateEmployeeById(employee.id)">Update</button>
+                          </div>
+                          <div class="card-actions justify-start">
+                            <button class="bg-red-600 btn text-white" (click)="deleteByEmployeeId(employee.id)">Delete</button>
+                          </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

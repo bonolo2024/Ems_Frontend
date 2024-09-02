@@ -1,0 +1,23 @@
+<div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost text-xl">Personnel</a>
+    </div>
+    <div *ngIf="user" class="flex-none">
+      {{ user.username }} 
+      <div>
+
+      </div>
+      <details class="dropdown">
+        <summary class="btn bg-transparent border-none">
+          <!-- <div class="mx-4 bg-gray-200  w-10 h-10 rounded-full"></div> -->
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+          </svg>
+          
+        </summary>
+        <ul  class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+          <li (click)="logout()"><a>Logout</a></li>
+        </ul>
+      </details>
+    </div>
+  </div>
